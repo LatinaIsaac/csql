@@ -18,7 +18,7 @@ switch ($_POST["statement"]) {
         $mail = new CEmail($_POST["File"] ?? null, $_POST["Number"] ?? null, $_POST["Email"] ?? null);
         break;
     case "e":
-        $excel = new CExcel();
+        $stmt_ = new Core\CExcel($_POST["KEY"]);
         break;
     case "z":
     $targetdir = 'images/';   
