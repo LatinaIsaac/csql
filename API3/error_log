@@ -1,0 +1,267 @@
+[30-Nov-2018 13:36:42 America/Chicago] PHP Parse error:  syntax error, unexpected '?' in /home/cervecr/public_html/API3/index.php on line 18
+[03-Dec-2018 12:37:05 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:37:05 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08004] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:37:05 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:37:05 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:37:05 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:37:05 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:37:05 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:37:05 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:37:06 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08004] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:37:08 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08004] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:37:49 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:38:06 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08004] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:40:16 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08004] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:41:35 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08004] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:41:38 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:41:40 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08004] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:41:44 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08004] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT mis.user...', Array)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT mis.user...', Array)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:41:51 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08004] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:41:54 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08004] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:42:15 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[08004] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:43:21 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[03-Dec-2018 12:45:48 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1040] Too many connections in /home/cervecr/public_html/API3/database.php:63
+Stack trace:
+#0 /home/cervecr/public_html/API3/database.php(63): PDO->__construct('mysql:host=loca...', 'cervecr_mainApp...', 'z&j+I89KyO&N', Array)
+#1 /home/cervecr/public_html/API3/database.php(137): Core\S_DATABASE::getConnection()
+#2 /home/cervecr/public_html/API3/CStatement.php(46): Core\S_DATABASE::execute('SELECT * FROM c...', NULL)
+#3 /home/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#4 {main}
+  thrown in /home/cervecr/public_html/API3/database.php on line 63
+[18-Dec-2018 00:14:19 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
+[21-Dec-2018 00:53:10 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT + FROM c...', Array)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
+[21-Dec-2018 00:53:10 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT + FROM c...', Array)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
+[25-Dec-2018 23:41:18 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT GROUP_CO...', NULL)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
+[25-Dec-2018 23:43:02 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT GROUP_CO...', NULL)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
+[25-Dec-2018 23:44:22 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT PV.estab...', NULL)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
+[25-Dec-2018 23:44:38 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT PV.estab...', NULL)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
+[25-Dec-2018 23:44:44 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT PV.estab...', NULL)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
+[25-Dec-2018 23:45:11 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT PV.estab...', NULL)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
+[25-Dec-2018 23:49:28 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT PV.*, (S...', NULL)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
+[07-Jan-2019 21:03:47 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
+[07-Jan-2019 21:03:52 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
+[07-Jan-2019 21:04:32 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
+[07-Jan-2019 21:04:39 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
+[07-Jan-2019 21:05:37 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function rowCount() on null in /home1/cervecr/public_html/API3/CStatement.php:67
+Stack trace:
+#0 /home1/cervecr/public_html/API3/CStatement.php(47): Core\CStatement->parseResponse(NULL)
+#1 /home1/cervecr/public_html/API3/index.php(37): Core\CStatement->__construct('sdhvY6232GBE3JH...', 'SELECT * FROM c...', NULL)
+#2 {main}
+  thrown in /home1/cervecr/public_html/API3/CStatement.php on line 67
