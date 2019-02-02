@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 namespace Core;
 class S_CONFIG {
 
@@ -18,7 +18,7 @@ class S_CONFIG {
                 // Web Configuration
                 'title' => 'API - Universidad Latina de Costa Rica',
                 'Web' => '',
-                'DBHost' => 'localhost',
+                'DBHost' => '186.159.129.2',
                 'DBase' => 'TERAPIAFISICA',
                 'DBUser' => 'terapia',
                 'DBPswd' => 'Terapia2019+',

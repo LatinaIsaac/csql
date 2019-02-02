@@ -2,10 +2,7 @@
 
 namespace Core;
 
-//require_once './excel-report/PHPExcel/Classes/PHPExcel.php';
 require_once './phpspreadsheet/vendor/autoload.php';
-
-//use PHPMailer\PHPMailer\PHPMailer;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 
@@ -32,19 +29,6 @@ class CExcel {
         }
 
         $this->genExcel($data, $len);
-
-        /*
-          $string = "SELECT * FROM Reportes_tf";
-          $rs = \Core\S_DATABASE::execute($string);
-
-          $len = $rs->rowCount();
-          $data = array();
-          for ($index = 0; $index < $len; $index++) {
-          array_push($data, $rs->fetch());
-          }
-
-          $this->llenarExcel($data, $len);
-         */
     }
 
     public function genExcel($data, $len) {
@@ -99,55 +83,6 @@ class CExcel {
         exit;
     }
 
-    /* public function llenarExcel($data, $len) {
-      date_default_timezone_set('America/Costa_Rica');
-
-      $filename = 'Reporte_Asistencia';
-      $objPHPExcel = new PHPExcel();
-
-      $objPHPExcel->setActiveSheetIndex(0)
-      ->setCellValue('A1', 'Docente')
-      ->setCellValue('B1', 'Carnet Estudiante')
-      ->setCellValue('C1', 'Fecha')
-      ->setCellValue('D1', 'Hora Entrada')
-      ->setCellValue('E1', 'Hora Salida')
-      ->setCellValue('F1', 'Estado Entrada')
-      ->setCellValue('G1', 'Estado Salida');
-
-      for ($i = 2; $i < $len + 2; $i++) {
-      $objPHPExcel->setActiveSheetIndex(0)
-      ->setCellValue('A' . $i, $data[$i - 2]["Docente"])
-      ->setCellValue('B' . $i, $data[$i - 2]["Carnet"])
-      ->setCellValue('C' . $i, $data[$i - 2]["Fecha"])
-      ->setCellValue('D' . $i, $data[$i - 2]["Hora_entrada"])
-      ->setCellValue('E' . $i, $data[$i - 2]["Hora_salida"])
-      ->setCellValue('F' . $i, $data[$i - 2]["Estado_entrada"])
-      ->setCellValue('G' . $i, $data[$i - 2]["Estado_salida"]);
-      }
-
-      foreach (range('A', 'G') as $columnID) {
-      $objPHPExcel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(true);
-      }
-
-      $objPHPExcel->getActiveSheet()->getStyle('A1:G1')->getFont()->setBold(true);
-
-      $objPHPExcel->getActiveSheet()
-      ->getStyle('A1:G1')
-      ->getFill()
-      ->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
-      ->getStartColor()
-      ->setARGB('00CCFF');
-
-      $objPHPExcel->getActiveSheet()->setTitle('Reporte_Asistencia.xls');
-      $objPHPExcel->setActiveSheetIndex(0);
-      $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
-
-      $objWriter->save($filename . '.xls');
-      //$objWriter->save('php://output');
-      $this->sendEmail($filename);
-      exit;
-      } */
-
     /* private function email() {
       ini_set('display_errors', 1);
       error_reporting(E_ALL);
@@ -162,29 +97,6 @@ class CExcel {
       echo "Correo enviado";
       } else {
       echo "Correo no enviado";
-      }
-      } */
-
-    /* private function sendEmail($filename) {
-      $mail = new PHPMailer;
-      $mail->isSMTP();
-      $mail->SMTPDebug = 2;
-      $mail->Host = '186.159.129.2';
-      $mail->Port = 587;
-      $mail->SMTPAuth = true;
-      $mail->Username = 'app.cview@gmail.com';
-      $mail->Password = 'IntelCorei01';
-      $mail->setFrom('app.cview@gmail.com', 'Cview');
-      //$mail->addReplyTo('reply-box@hostinger-tutorials.com', 'Your Name');
-      $mail->addAddress('jostin.barrantes_10@hotmail.com', 'Jostin');
-      $mail->Subject = 'PHPMailer SMTP message';
-      $mail->msgHTML(file_get_contents('message.html'), __DIR__);
-      $mail->AltBody = 'This is a plain text message body';
-      $mail->addAttachment('test.txt');
-      if (!$mail->send()) {
-      echo 'Mailer Error: ' . $mail->ErrorInfo;
-      } else {
-      echo 'Message sent!';
       }
       } */
 
@@ -216,10 +128,26 @@ class CExcel {
         $bool = mail($to, $subject, $message, $headers);
         unlink($files);
         if ($bool == true) {
-            echo "Correo enviado";
+            echo $this->response(200, "success", 1, 1);
+            //echo "Correo enviado";
         } else {
-            echo "Correo no enviado";
+            echo $this->response(0, "not send", 0, 0);
+            //echo "Correo no enviado";
         }
+    }
+    
+    protected function response($status, $status_message, $data_lenght, $data) {
+        header("HTTP/1.1 " . $status);
+        header('Content-Type: application/json');
+
+        $response['status'] = $status;
+        $response['status_message'] = $status_message;
+        $response['columnas'] = $data_lenght;
+        $response['data'] = $data;
+
+        $json_response = json_encode($response, JSON_PRETTY_PRINT);
+        echo $json_response;
+        exit;
     }
 
 }
