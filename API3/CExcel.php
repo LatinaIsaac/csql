@@ -14,6 +14,7 @@ class CExcel {
     private $st;
 
     public function __construct($key) {
+	echo $this->response(200, "entra a CExcel", 1, 1);
         //$this->email();
         if (strcmp($key, $this->keyGEN) != 0) {
             $this->response(190, "Invalid Session $key", 0, NULL);
