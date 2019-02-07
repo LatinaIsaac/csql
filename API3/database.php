@@ -1,7 +1,5 @@
 <?php
-
-    namespace Core;
-
+namespace Core;
     use PDO;
 
     /**

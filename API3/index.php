@@ -1,5 +1,5 @@
 <?php
-
+ini_set('display_errors', 'Off');
 require_once './config.php';
 require_once './CEmail.php';
 require_once './CExcel.php';
@@ -18,7 +18,7 @@ switch ($_POST["statement"]) {
         $mail = new CEmail($_POST["File"] ?? null, $_POST["Number"] ?? null, $_POST["Email"] ?? null);
         break;
     case "e":
-        $stmt_ = new Core\CExcel($_POST["KEY"]);
+        $stmt_ = new Core\CExcel($_POST["KEY"],$_POST["correo"],$_POST["carnet"]);
         break;
     case "z":
     $targetdir = 'images/';   
@@ -34,7 +34,7 @@ switch ($_POST["statement"]) {
     }
     break;
     default:
-        $stmt_ = new Core\CStatement($_POST["KEY"], $_POST["statement"], $_POST["p"] ?? NULL);
+	$stmt_ = new Core\CStatement($_POST["KEY"], $_POST["statement"], $_POST["p"] ?? NULL);
         break;
 }
 

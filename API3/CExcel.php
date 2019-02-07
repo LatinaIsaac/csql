@@ -3,19 +3,24 @@
 namespace Core;
 
 require_once './phpspreadsheet/vendor/autoload.php';
+
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 
+require("./phpmailer/PHPMailer.php");
+require("./phpmailer/SMTP.php");
+
 class CExcel {
 
-    //http://localhost/API3/?KEY=sdhvY6232GBE3JH@sj2&statement=e
+    //http://localhost/API3/?KEY=sdhvY6232GBE3JH@sj2&statement=e&correo=jostin.barrantes_10@hotmail.com&carnet=2018
 
     private $keyGEN = "sdhvY6232GBE3JH@sj2";
     private $st;
 
-    public function __construct($key) {
-	echo $this->response(200, "entra a CExcel", 1, 1);
-        //$this->email();
+    public function __construct($key, $correo, $carnet) {
+        //$this->removeFile();
+        //$this->email($correo, $carnet);
+
         if (strcmp($key, $this->keyGEN) != 0) {
             $this->response(190, "Invalid Session $key", 0, NULL);
         }
@@ -29,10 +34,10 @@ class CExcel {
             array_push($data, $rs->fetch());
         }
 
-        $this->genExcel($data, $len);
+        $this->genExcel($data, $len, $correo, $carnet);
     }
 
-    public function genExcel($data, $len) {
+    public function genExcel($data, $len, $correo, $carnet) {
         $documento = new Spreadsheet();
         $documento->getProperties()
                 ->setCreator("Cview")
@@ -80,63 +85,45 @@ class CExcel {
         $objWriter = IOFactory::createWriter($documento, 'Xlsx');
         $objWriter->save($nombreDelDocumento);
         //$objWriter->save('php://output');
-        $this->sendEmail($nombreDelDocumento);
+        $this->email($nombreDelDocumento, $correo, $carnet);
         exit;
     }
 
-    /* private function email() {
-      ini_set('display_errors', 1);
-      error_reporting(E_ALL);
-      $from = "app.cview@gmail.com";
-      $to = "jostin.barrantes_10@hotmail.com";
-      $subject = "Checking PHP mail";
-      $message = "PHP mail works just fine";
-      $headers = "From:" . $from;
+    private function email($nombreDelDocumento, $correo, $carnet) {
+        $mail = new \PHPMailer\PHPMailer\PHPMailer();
+        $mail->isSMTP();
+        $mail->SMTPAuth = true;
+        $mail->SMTPSecure = 'ssl';
+        $mail->Host = "smtp.gmail.com";
+        $mail->Port = 465;
+        $mail->IsHTML(true);
+        $mail->Username = "app.cview@gmail.com";
+        $mail->Password = "IntelCorei01";
+        $mail->SetFrom("app.cview@gmail.com");
+        $mail->Subject = "Reporte de Asistencias";
+        $mail->Body = "Estimado/a usuario <strong>$carnet</strong>, <br /> <br /> <br />";
+        $mail->Body .= "Se adjunta el archivo excel con el reporte de asistencias.";
+        $mail->AddAddress($correo);
+        $mail->addAttachment("./$nombreDelDocumento");
+        $boolean = $mail->validateAddress($correo);
 
-      $bool = mail($to, $subject, $message, $headers);
-      if ($bool == true) {
-      echo "Correo enviado";
-      } else {
-      echo "Correo no enviado";
-      }
-      } */
-
-    private function sendEmail($filename) {
-        //yamileth.ramirez@ulatina.cr
-        $to = "jostin.barrantes_10@hotmail.com";
-        $subject = "Reporte de Asistencias";
-        $files = $filename;
-
-        $msg = "Se adjunta el archivo excel con el reporte de asistencias.";
-        $headers = "From: Sistema Control de Asistencias <sistcontrol@flutter.com>";
-
-        $semi_rand = md5(time());
-        $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
-
-        $headers .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
-
-        $message = "This is a multi-part message in MIME format.\n\n" . "--{$mime_boundary}\n" . "Content-Transfer-Encoding: 7bit\n\n" . $msg . "\n\n";
-        $message .= "--{$mime_boundary}\n";
-
-        $file = fopen($files, "rb");
-        $data = fread($file, filesize($files));
-        fclose($file);
-        $data = chunk_split(base64_encode($data));
-        $message .= "Content-Disposition: attachment;\n" . " filename=\"$files\"\n" .
-                "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
-        $message .= "--{$mime_boundary}\n";
-
-        $bool = mail($to, $subject, $message, $headers);
-        unlink($files);
-        if ($bool == true) {
-            echo $this->response(200, "success", 1, 1);
-            //echo "Correo enviado";
+        if ($boolean == 1) {
+            if (!$mail->Send()) {
+                echo $this->response(0, "not send: " . $mail->ErrorInfo, 0, 0);
+                //echo "Mailer Error: " . $mail->ErrorInfo;
+            } else {
+                echo $this->response(202, "success", 1, 1);
+                //echo "Message has been sent";
+            }
         } else {
-            echo $this->response(0, "not send", 0, 0);
-            //echo "Correo no enviado";
+            echo $this->response(0, "correo no valido", 1, 1);
         }
     }
-    
+
+    private function removeFile() {
+        unlink("Reporte_Asistencia.xlsx");
+    }
+
     protected function response($status, $status_message, $data_lenght, $data) {
         header("HTTP/1.1 " . $status);
         header('Content-Type: application/json');

@@ -1,5 +1,4 @@
 <?php
-
 class image{
 
     private $save_path = 'images/';

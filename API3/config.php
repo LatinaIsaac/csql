@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 namespace Core;
 class S_CONFIG {
 
@@ -17,12 +17,12 @@ class S_CONFIG {
             S_CONFIG::$CONFIG = array(
                 // Web Configuration
                 'title' => 'API - Universidad Latina de Costa Rica',
-                'Web' => '',
-                'DBHost' => '186.159.129.2',
-                'DBase' => 'TERAPIAFISICA',
-                'DBUser' => 'terapia',
-                'DBPswd' => 'Terapia2019+',
-                'UseMD5' => 1
+                    'Web' => '',
+                    'DBHost' => 'localhost',
+                    'DBase' => 'TERAPIAFISICA',
+                    'DBUser' => 'terapia',
+                    'DBPswd' => 'Terapia2019+',
+                    'UseMD5' => 1
             );
         }
     }
@@ -35,5 +35,4 @@ class S_CONFIG {
         S_CONFIG::initConfig();
         return (isset(S_CONFIG::$CONFIG[$var]) ? S_CONFIG::$CONFIG[$var] : NULL );
     }
-
 }
