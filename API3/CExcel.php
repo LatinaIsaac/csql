@@ -25,7 +25,7 @@ class CExcel {
             $this->response(190, "Invalid Session $key", 0, NULL);
         }
 
-        $this->st = "SELECT * FROM reportes_cview";
+        $this->st = "SELECT * FROM reportes_cview order by Fecha";
         $rs = \Core\S_DATABASE::execute($this->st);
 
         $len = $rs->rowCount();
