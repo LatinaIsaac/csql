@@ -19,9 +19,9 @@ class S_CONFIG {
                 'title' => 'API - Universidad Latina de Costa Rica',
                     'Web' => '',
                     'DBHost' => 'localhost',
-                    'DBase' => 'TERAPIAFISICA',
-                    'DBUser' => 'terapia',
-                    'DBPswd' => 'Terapia2019+',
+                    'DBase' => 'xxxx',
+                    'DBUser' => 'xxxx',
+                    'DBPswd' => 'zzzz+',
                     'UseMD5' => 1
             );
         }
